@@ -27,6 +27,87 @@ html {
   color: #9ca3af;
 }
 
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-badge {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #161622, #24243a);
+    border: 1px solid rgba(58,210,237,.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3ad2ed;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: .35s ease;
+}
+
+.logo-badge::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        transparent,
+        rgba(58,210,237,.18),
+        transparent
+    );
+    transform: translateX(-100%);
+    transition: .6s;
+}
+
+.logo:hover .logo-badge::before {
+    transform: translateX(100%);
+}
+
+.logo:hover .logo-badge {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(58,210,237,.25);
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.button-effect:hover {
+background-color: #00ceea;
+}
+
+/* logo badge */
+.logo-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.15);
+    backdrop-filter: blur(12px);
+    color: #3ad2ed;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.logo-badge:hover {
+    background: #3ad2ed;
+    color: #111118;
+}
+
 .border-custom {
   border-color: #2a2a3e;
 }
@@ -210,6 +291,7 @@ body {
   border-color: #00ceea;
   box-shadow: 0 0 32px rgba(124, 58, 237, 0.15);
 }
+
 
 /* Skill badge */
 .skill-badge {
